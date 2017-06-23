@@ -1,4 +1,6 @@
 spring-war-with-docker-tomcat.iml
 spring-war-with-docker-tomcat.ipr
 spring-war-with-docker-tomcat.iws
+build
+out
 

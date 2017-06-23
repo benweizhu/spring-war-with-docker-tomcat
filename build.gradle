@@ -11,6 +11,12 @@ apply plugin: 'java'
 apply plugin: 'idea'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
+apply plugin: 'war'
+
+war {
+    baseName = 'spring-war-with-docker-tomcat'
+    version =  '1.0'
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -23,6 +29,8 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:21.0'
     compile 'org.springframework.boot:spring-boot-starter-web:1.5.4.RELEASE'
+
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:1.5.4.RELEASE")
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
