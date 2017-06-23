@@ -1,4 +1,4 @@
-# docker-nginx-reverse-proxy-tomcat
+# Boot spring war package with docker tomcat
 
 A few things have been done.
 
