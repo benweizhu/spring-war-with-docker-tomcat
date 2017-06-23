@@ -1,6 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: "org.springframework.boot"
+apply plugin: 'war'
+
+war {
+    baseName = 'spring-war-with-docker-tomcat'
+    version = '1.0'
+}
 
 buildscript {
     repositories {
@@ -19,4 +25,10 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-devtools'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+bootRun {
+    addResources = true
 }
